@@ -147,7 +147,6 @@ def download_book(file):
 
 
 @app.route('/read_book/<book_id>', methods=['GET'])
-@login_required
 def read_book(book_id):
     db_sess = db_session.create_session()
     for book in db_sess.query(Book).filter(Book.id == book_id).all():  

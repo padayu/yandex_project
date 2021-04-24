@@ -6,6 +6,7 @@
 <h3>{{message}}</h3>
 <form action="" method="post">
     {{ form.hidden_tag() }}
+    <a href="/" class="btn btn-secondary">Back</a>
     <p>
         {{ form.username.label }}<br>
         {{ form.username(class="form-control") }}<br>

@@ -5,6 +5,7 @@
 {% block content %}
     <form action="" method="post">
         {{ form.hidden_tag() }}
+        <a href="/" class="btn btn-secondary">Back</a>
         <p>
             {{ form.email.label }}<br>
             {{ form.email(class="form-control", type="email") }}<br>
