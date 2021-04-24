@@ -9,9 +9,7 @@ from data.authors import Author
 
 from forms.reg_log_forms import RegisterForm, LoginForm
 from forms.book_forms import AddBookForm, SearchBookForm
-
-# import data.user_resource as user_resource
-# import data.jobs_resource as jobs_resource
+import os
 
 from flask_login import LoginManager, login_user, current_user, logout_user, \
     login_required
@@ -38,7 +36,8 @@ def main():
     app.register_blueprint(jobs_api.blueprint)
     app.register_blueprint(user_api.blueprint)
     '''
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 
 
 
