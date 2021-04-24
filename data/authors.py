@@ -2,7 +2,7 @@ import datetime
 import sqlalchemy
 from sqlalchemy import orm
 
-from db_session import SqlAlchemyBase
+from .db_session import SqlAlchemyBase
 
 from sqlalchemy_serializer import SerializerMixin
 
