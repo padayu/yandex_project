@@ -1,0 +1,17 @@
+div.book {
+    margin-top: 5px;
+    background-color: #498b38;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+a.btn {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+body.sas {
+    background-image: url("../img/aleksei.png");
+    background-repeat: repeat;
+   }

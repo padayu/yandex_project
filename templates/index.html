@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+<a href="add_book" class="btn btn-secondary">Добавить Книгу</a>
+<a href="search_book" class="btn btn-secondary">Поиск</a>
+<a href="my_books" class="btn btn-primary">Загруженное Вами</a>
+{% for i in books%}
+<div class="book">
+<h2>{{ i.author_name }} - {{ i.title }}</h2>
+<p>загружено {{i.user_uploaded_name}}</p>
+<a href="read_book/{{ i.id }}" class="btn btn-secondary">Читать</a>
+<a class="btn btn-primary" href="/download_book/{{ i.file }}" download="{{ i.file }}">Скачать</a>
+</div>
+{% endfor %}
+{% endblock %}

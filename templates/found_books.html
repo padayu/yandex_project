@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Search results{% endblock %}
+
+{% block content %}
+<a href="/" class="btn btn-secondary">Back</a>
+{% if books %}
+{% for i in books%}
+<div class="book">
+<h2>{{ i.author_name }} - {{ i.title }}</h2>
+<p>uploaded by {{i.user_uploaded_name}}</p>
+<a href="read_book/{{ i.id }}" class="btn btn-secondary">Read</a>
+<a class="btn btn-primary" href="/download_book/{{ i.file }}" download="{{ i.file }}">Download</a>
+</div>
+{% endfor %}
+{% else %}
+<h2>Nothing found :(</h2>
+{% endif %}
+{% endblock %}

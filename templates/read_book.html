@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Reading{% endblock %}
+
+{% block content %}
+<a href="/" class="btn btn-secondary">Back</a>
+<h2>{{ book.author_name }} - {{ book.title }}</h2>
+<h4>Uploaded by {{book.user_uploaded_name}}</h4>
+<a class="btn btn-primary" href="/download_book/{{ book.file }}" download="{{ book.file }}">Download</a>
+    {% for i in text %}
+    <p>
+    {{i}}
+    </p>
+    {% endfor %}
+{% endblock %}
